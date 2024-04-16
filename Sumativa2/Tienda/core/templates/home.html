@@ -1,0 +1,10 @@
+{% extends 'juegos.html'%}
+
+{% block content %}
+
+<title>Home</title>
+        {% if request.user.is_authenticated %}
+            <h4>Bienvenido {{user.username | upper}}! </h4>
+        {% endif %}
+
+{% endblock %}
