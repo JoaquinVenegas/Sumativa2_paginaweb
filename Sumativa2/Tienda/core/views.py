@@ -70,4 +70,28 @@ def exit(request):
     logout(request)
     return redirect('index')
 
+def mostrar(request, id):
+    Juegos = [
+        {'nombre': 'Monster Hunter Rise: Sunbreak', 'precio': '60000', 'cantidad': '70'},
+        {'nombre': 'Hunt Showdown', 'precio': '22000', 'cantidad': '55'},
+        {'nombre': 'Days Gone', 'precio': '35000', 'cantidad': '32'},
+        {'nombre': 'Need For Speed: Payback', 'precio': '32000', 'cantidad': '27'},
+        {'nombre': 'Crash Team Racing: Nitro Fueled', 'precio': '45000', 'cantidad': '46'},
+        {'nombre': 'Hawked', 'precio': '0', 'cantidad': '999'},
+        {'nombre': 'Fortnite', 'precio': '0', 'cantidad': '999'},
+        {'nombre': 'Phasmophobia', 'precio': '10000', 'cantidad': '39'},
+        {'nombre': 'Pacify', 'precio': '8500', 'cantidad': '27'},
+        {'nombre': 'Dragons Dogma 2', 'precio': '65000', 'cantidad': '60'},
+        {'nombre': 'Red Dead Redemption 2', 'precio': '45000', 'cantidad': '51'},
+        {'nombre': 'Green Hell', 'precio': '20000', 'cantidad': '38'},
+        {'nombre': 'Pathologic 2', 'precio': '15000', 'cantidad': '24'}
+    ]
+
+    if id >= 0 and id < len(Juegos):
+        contexto= {
+            'juegos' :  Juegos[id]
+        }
+        return render(request, 'carrito.html', contexto)
+    else:
+        return redirect('juegos')
 

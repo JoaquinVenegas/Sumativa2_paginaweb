@@ -1,6 +1,14 @@
 {% extends 'juegos.html' %}
 {% block content %}
 
-    
+<div class="container" style="margin-top: 5%; margin-bottom: 5%; margin-left: 45%;">
+    <div class="row">
+            <div class="contenedor">
+                <h5>{{juegos.nombre}}</h5>
+                <div>Precio: ${{juegos.precio}}</div>
+                <div>Quedan: {{juegos.cantidad}}</div>
+            </div>
+    </div>
+</div>
 
 {% endblock %}
