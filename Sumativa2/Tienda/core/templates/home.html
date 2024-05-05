@@ -4,7 +4,13 @@
 
 <title>Home</title>
         {% if request.user.is_authenticated %}
-            <h4>Bienvenido {{user.username | upper}}! </h4>
+        <div class="container" style="margin-top: 5%; margin-bottom: 5%; margin-left: 45%;">
+            <div class="row">
+                    <div class="contenedor">
+                        <h5>Bienvenido {{user.username | upper}}!</h5>
+                    </div>
+            </div>
+        </div>
         {% endif %}
 
 {% endblock %}

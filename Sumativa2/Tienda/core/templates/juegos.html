@@ -24,7 +24,11 @@
                     <ul class="submenu-content">
                         <li><a href="{% url 'modificar'%}">Modificar Perfil</a></li>
                         <li><a href="{% url  'recuperar' %}">Recuperación</a></li>
-                        <li><a href="">Cerrar Sesion</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">Cerrar Sesion</a></li>
+                        {% else %}
+                        <li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
+                        {% endif %}
                     </ul>
                 </li>
             </ul>

@@ -72,7 +72,7 @@ def exit(request):
 
 def mostrar(request, id):
     Juegos = [
-        {'nombre': 'Monster Hunter Rise: Sunbreak', 'precio': '60000', 'cantidad': '70'},
+        {'imagen':'/MHR.jpg','nombre': 'Monster Hunter Rise: Sunbreak', 'precio': '60000', 'cantidad': '70'},
         {'nombre': 'Hunt Showdown', 'precio': '22000', 'cantidad': '55'},
         {'nombre': 'Days Gone', 'precio': '35000', 'cantidad': '32'},
         {'nombre': 'Need For Speed: Payback', 'precio': '32000', 'cantidad': '27'},
